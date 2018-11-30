@@ -1,9 +1,9 @@
 def pet_shop_name(pet_shop)
-  return pet_shop[:name]
+  pet_shop[:name]
 end
 
 def total_cash(pet_shop)
-  return pet_shop[:admin][:total_cash]
+  pet_shop[:admin][:total_cash]
 end
 
 def add_or_remove_cash(pet_shop, new_cash)
@@ -18,7 +18,7 @@ end
 # end
 
 def pets_sold(pet_shop)
-  return pet_shop[:admin][:pets_sold]
+  pet_shop[:admin][:pets_sold]
 end
 
 def increase_pets_sold(pet_shop, new_sales)
@@ -27,7 +27,7 @@ def increase_pets_sold(pet_shop, new_sales)
 end
 
 def stock_count(pet_shop)
-  return pet_shop[:pets].length
+  pet_shop[:pets].length
 end
 
 def pets_by_breed(pet_shop, breed)
@@ -73,7 +73,7 @@ def remove_pet_by_name(pet_shop, pet_name)
 end
 
 def stock_count(pet_shop)
-  return pet_shop[:pets].length
+  pet_shop[:pets].length
 end
 
 def add_pet_to_stock(pet_shop, new_pet)
@@ -81,9 +81,17 @@ def add_pet_to_stock(pet_shop, new_pet)
 end
 
 def customer_cash(customer)
-  return customer[:cash]
+  customer[:cash]
 end
 
 def remove_customer_cash(customer, amount)
-  return customer[:cash] -= amount
+  customer[:cash] -= amount
+end
+
+def customer_pet_count(customer)
+  customer[:pets].length
+end
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets].push(new_pet)
 end
