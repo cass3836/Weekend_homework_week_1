@@ -80,9 +80,10 @@ def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets].push(new_pet)
 end
 
-#
-# def test_add_pet_to_stock
-#   add_pet_to_stock(@pet_shop, @new_pet)
-#   count = stock_count(@pet_shop)
-#   assert_equal(7, count)
-# end
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+def remove_customer_cash(customer, amount)
+  return customer[:cash] -= amount
+end
