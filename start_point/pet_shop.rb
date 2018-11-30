@@ -39,3 +39,13 @@ def pets_by_breed(pet_shop, breed)
   end
   return breed_found
 end
+
+def find_pet_by_name(pet_shop, pet_name)
+  name_found = Array.new
+  for pet in pet_shop[:pets]
+    if pet[:name] == pet_name
+      name_found.push(pet)
+    end
+  end
+  return name_found[0]
+end
